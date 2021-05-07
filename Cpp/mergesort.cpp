@@ -41,14 +41,16 @@ int main(int argc, char const *argv[])
 {
     size_t N = 100;
     int a[N] = {};
+
     std::random_device rd;
     std::mt19937 gen;
     std::uniform_int_distribution<> dis(0,1000);
+
     std::cout << "Unsorted:\n";
     for (size_t i = 0; i < N; i++)
     {
         a[i] = dis(gen);
-        std::cout << "a[" << i << "] = " << a[i] << " ";
+        std::cout << a[i] << " ";
     }
 
     MergeSort<int>(a, 0, N - 1);
@@ -56,7 +58,7 @@ int main(int argc, char const *argv[])
     std::cout << "\nSorted:\n";
     for (size_t i = 0; i < N; i++)
     {
-        std::cout << "a[" << i << "] = " << a[i] << " ";
+        std::cout << a[i] << " ";
     }
     std::cout << std::endl;
     return 0;

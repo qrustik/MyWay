@@ -2,7 +2,6 @@
 #include <random>
 #include <array>
 #include <algorithm>
-#include <cstdlib>
 
 template <typename T>
 void Merge(T a[], size_t left, size_t mid, size_t right)
@@ -108,6 +107,7 @@ int main(int argc, char const *argv[])
     size_t N = 100;
     std::array<int, 100> a = {};
     std::array<int, 100> b = {};
+
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, 100);
@@ -124,10 +124,10 @@ int main(int argc, char const *argv[])
 
     std::sort(b.begin(), b.end());
 
-    std::cout << "\nSorted:\n";
+    std::cout << "\nQuicksort:\n";
     for (size_t i = 0; i < N; i++)
         std::cout << a[i] << " ";
-    std::cout << "\nSorted:\n";
+    std::cout << "\nSort:\n";
     for (size_t i = 0; i < N; i++)
         std::cout << b[i] << " ";
 
