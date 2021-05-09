@@ -6,7 +6,7 @@ namespace myalgo
     using size_t = __SIZE_TYPE__;
 
     template <typename T>
-    int Partition(T a[], const size_t &l, const size_t &r)
+    int partition(T a[], const size_t &l, const size_t &r)
     {
         T v = a[(l + r) / 2];
         size_t i = l;
@@ -68,9 +68,9 @@ namespace myalgo
 
         swap<T>(a[median<T>(a, l, r)], a[(r + l) / 2]);
 
-        size_t i = Partition<T>(a, l, r);
+        size_t i = partition<T>(a, l, r);
 
-        QuickSort<T>(a, l, i);
-        QuickSort<T>(a, i + 1, r);
+        quicksort<T>(a, l, i);
+        quicksort<T>(a, i + 1, r);
     }
 }
