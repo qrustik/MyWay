@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*lsp": "commonlisp",
+        "*lisp": "commonlisp",
+        "vector": "cpp"
+    }
+}
