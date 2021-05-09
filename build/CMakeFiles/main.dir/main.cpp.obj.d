@@ -114,4 +114,5 @@ CMakeFiles/main.dir/main.cpp.obj: F:\MyProject\main.cpp \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\random.tcc \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\numeric \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_numeric.h \
- F:\MyProject\myalgo.hpp F:\MyProject\mergesort.hpp
+ F:\MyProject\myalgo.hpp F:\MyProject\mergesort.hpp \
+ F:\MyProject\quicksort.hpp
