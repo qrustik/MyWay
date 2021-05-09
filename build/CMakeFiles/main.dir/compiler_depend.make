@@ -117,6 +117,9 @@ CMakeFiles/main.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_bvector.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/vector.tcc \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/array \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/utility \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_relops.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/random \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cmath \
   C:/MinGW/include/math.h \
@@ -128,7 +131,8 @@ CMakeFiles/main.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/numeric \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_numeric.h \
   ../myalgo.hpp \
-  ../mergesort.hpp
+  ../mergesort.hpp \
+  ../quicksort.hpp
 
 
 C:/MinGW/include/_mingw.h:
@@ -353,6 +357,12 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_bvector.h:
 
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/array:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/utility:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_relops.h:
+
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/random:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cmath:
@@ -374,3 +384,5 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_numeric.h:
 ../myalgo.hpp:
 
 ../mergesort.hpp:
+
+../quicksort.hpp:
