@@ -5,7 +5,7 @@ namespace myalgo
 {
     using size_t = __SIZE_TYPE__;
 
-    namespace sort
+    namespace detail
     {
 
         template <typename T>
@@ -68,9 +68,9 @@ namespace myalgo
             return;
         }
 
-        sort::swap<T>(a[sort::median<T>(a, l, r)], a[(r + l) / 2]);
+        detail::swap<T>(a[detail::median<T>(a, l, r)], a[(r + l) / 2]);
 
-        size_t i = sort::partition<T>(a, l, r);
+        size_t i = detail::partition<T>(a, l, r);
 
         quicksort<T>(a, l, i);
         quicksort<T>(a, i + 1, r);

@@ -2,18 +2,15 @@
 
 namespace myalgo
 {
-    namespace _merge{
+    namespace detail
+    {
         template <typename T>
-        void _merge(T a[],
-                const size_t &left,
-                const size_t &mid,
-                const size_t &right,
-                T _buf[])
+        void _merge(T a[], const size_t &left, const size_t &mid, const size_t &right, T _buf[])
         {
             size_t i = left,
-                j = mid + 1,
-                k = 0,
-                size = right - left + 1;
+                   j = mid + 1,
+                   k = 0,
+                   size = right - left + 1;
 
             for (i, j, k; i <= mid && j <= right;)
             {
@@ -34,10 +31,7 @@ namespace myalgo
         }
 
         template <typename T>
-        void _mergesort(T a[],
-                    const size_t &left,
-                    const size_t &right,
-                    T _buf[])
+        void _mergesort(T a[], const size_t &left, const size_t &right, T _buf[])
         {
             if (left == right)
                 return;
@@ -50,9 +44,9 @@ namespace myalgo
     }
 
     template <typename T>
-    void mergesort(T a[], const size_t &left, const size_t &right)
+    static void mergesort(T a[], const size_t &left, const size_t &right)
     {
         T _buf[right - left + 1] = {};
-        _merge::_mergesort<T>(a, left, right, _buf);
+        detail::_mergesort<T>(a, left, right, _buf);
     }
-}
+};

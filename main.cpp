@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
     myalgo::quicksort(a.data(), 0, n - 1); // for vector sort dont working idk?
 
     for (int i = 0; i < n; ++i)
-        std::cout << a[i] << " ";
+         std::cout << a[i] << " ";
 
     std::cout << std::endl;
     return 0;
