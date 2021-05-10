@@ -130,7 +130,8 @@ CMakeFiles/main.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/random.tcc \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/numeric \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_numeric.h \
-  ../mergesort.hpp
+  ../mergesort.hpp \
+  ../quicksort.hpp
 
 
 C:/MinGW/include/_mingw.h:
@@ -380,3 +381,5 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/numeric:
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_numeric.h:
 
 ../mergesort.hpp:
+
+../quicksort.hpp:
