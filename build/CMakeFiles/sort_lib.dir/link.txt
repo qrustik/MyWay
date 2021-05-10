@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libsort_lib.a CMakeFiles/sort_lib.dir/mergesort.cpp.obj
-C:\MinGW\bin\ranlib.exe libsort_lib.a
