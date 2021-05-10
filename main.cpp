@@ -2,7 +2,8 @@
 #include <vector>
 #include <array>
 #include <random>
-#include "myalgo.hpp"
+#include "mergesort.hpp"
+#include "quicksort.hpp"
 
 int main(int argc, char const *argv[])
 {
