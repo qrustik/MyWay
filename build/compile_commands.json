@@ -1,7 +1,0 @@
-[
-{
-  "directory": "F:/MyProject/build",
-  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\main.dir\\source\\main.cpp.obj -c F:\\MyProject\\source\\main.cpp",
-  "file": "F:/MyProject/source/main.cpp"
-}
-]
