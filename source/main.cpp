@@ -24,7 +24,7 @@ int main(int argc, char const* argv[])
     for (auto&& i : v)
         std::cout << i << " ";
 
-    myalgo::mergesort<int>(v.data(), 0, v.size() - 1);
+    myalgo::mergeSort<int>(v.data(), 0, v.size() - 1);
 
     std::cout << "\nMergesort\n";
 

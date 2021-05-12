@@ -5,9 +5,9 @@
 namespace myalgo
 {
     template <typename T>
-    void quicksort(T a[], size_t l, size_t r) {
+    void quickSort(T a[], size_t l, size_t r) {
         if (r - l < 11) {
-            mergesort<T>(a, l, r);
+            mergeSort<T>(a, l, r);
             return;
         }
 
@@ -15,7 +15,7 @@ namespace myalgo
 
         size_t i = detail::partition<T>(a, l, r);
 
-        quicksort<T>(a, l, i);
-        quicksort<T>(a, i + 1, r);
+        quickSort<T>(a, l, i);
+        quickSort<T>(a, i + 1, r);
     }
 }
