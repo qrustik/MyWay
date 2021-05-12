@@ -9,9 +9,11 @@
 int main(int argc, char const* argv[])
 {
     auto v = std::vector<int>{};
+    auto v1 = std::vector<int>{};
     auto a = std::array<int, 200>{};
     size_t n = 1000;
     v.resize(n);
+    v1.resize(n);
 
     std::random_device rd;
     std::mt19937 gen;
@@ -19,6 +21,7 @@ int main(int argc, char const* argv[])
 
     for (int i = 0; i < v.size(); ++i) {
         v[i] = dis(gen);
+        v1[i] = v[i];
     }
 
     for (auto&& i : v)
@@ -28,9 +31,9 @@ int main(int argc, char const* argv[])
 
     std::cout << "\nMergesort\n";
 
-    for (auto&& i : v)
+    for (auto&& i : v) {
         std::cout << i << " ";
-
+    }
 
     // std::cout << "\nQuicksort\n";
 
@@ -38,6 +41,14 @@ int main(int argc, char const* argv[])
 
     // for (int i = 0; i < n; ++i)
     //      std::cout << a[i] << " ";
+
+    myalgo::insertionSort<int>(v1.data(), v1.size());
+
+    std::cout << "\nInsert sort:\n";
+
+    for (auto&& i : v1) {
+        std::cout << i << " ";
+    }
 
     std::cout << std::endl;
     return 0;
