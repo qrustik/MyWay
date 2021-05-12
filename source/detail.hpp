@@ -69,25 +69,48 @@ namespace detail
         return j;
     }
 
-    // template <typename T>
-    // size_t median(const T a[], const size_t& l, const size_t& r) {
-    //     size_t tmp[3] = { l, (r + l) / 2, r };
-    //     while (!(a[tmp[1]] >= a[tmp[0]] && a[tmp[1]] <= a[tmp[2]])) {
-    //         if (a[tmp[1]] > a[tmp[0]]) {
-    //             swap<size_t>(tmp[0], tmp[1]);
-    //         }
-    //         else if (a[tmp[1]] < a[tmp[2]]) {
-    //             swap<size_t>(tmp[1], tmp[2]);
-    //         }
-    //         else if (a[tmp[0]] > a[tmp[2]]) {
-    //             swap<size_t>(tmp[0], tmp[2]);
-    //         }
-    //     }
-    //     return tmp[1];
-    // }
 
+    // For determined functions
 
+    template<typename T>
+    size_t median(T a[], const size_t& left, const size_t& right)
+    {
+        size_t size = (right - left + 1);
+        size_t parts = size / 5;
+        size_t medians[parts + 1] = {};
 
+        for (size_t i = left + 5, m = 0; i <= right; i += 5) {
+            size_t index = i - 5;
+            for (size_t j = index + 1; j < i; j++) {
+                size_t k = j;
+                while ((a[k] < a[k - 1]) && (k >= index)) {
+                    swap(a[k], a[k - 1]);
+                    --k;
+                }
+            }
+            medians[m++] = a[i - 3];
+        }
+
+        size_t index = parts * 5;
+
+        for (size_t i = index + 1; i < size; ++i) {
+            size_t j = i;
+            while (a[j] < a[j - 1] && j >= index) {
+                swap(a[j], a[j - 1]);
+                --j;
+            }
+        }
+
+        for (size_t i = 1; i < parts + 1; ++i) {
+            size_t j = i;
+            while (medians[j] < medians[j - 1] && j >= 0) {
+                swap(medians[j], medians[j - 1]);
+                --j;
+            }
+        }
+
+        return medians[parts + 1 / 2];
+    }
 
 
 }
