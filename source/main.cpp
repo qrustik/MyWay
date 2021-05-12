@@ -4,6 +4,7 @@
 #include <random>
 #include "mergesort.hpp"
 #include "quicksort.hpp"
+#include "insertionsort.hpp"
 
 int main(int argc, char const* argv[])
 {
@@ -29,6 +30,7 @@ int main(int argc, char const* argv[])
 
     for (auto&& i : v)
         std::cout << i << " ";
+
 
     // std::cout << "\nQuicksort\n";
 
