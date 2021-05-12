@@ -11,11 +11,11 @@ namespace myalgo
             return;
         }
 
-        detail::swap<T>(a[detail::median<T>(a, l, r)], a[(r + l) / 2]);
+        detail::swap(a[detail::median<T>(a, l, r)], a[(r + l) / 2]);
 
-        size_t i = detail::partition<T>(a, l, r);
+        size_t i = detail::partition(a, l, r);
 
-        quickSort<T>(a, l, i);
-        quickSort<T>(a, i + 1, r);
+        quickSort(a, l, i);
+        quickSort(a, i + 1, r);
     }
 }

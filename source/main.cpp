@@ -5,6 +5,7 @@
 #include "mergesort.hpp"
 #include "quicksort.hpp"
 #include "insertionsort.hpp"
+#include "kth-element.hpp"
 
 int main(int argc, char const* argv[])
 {

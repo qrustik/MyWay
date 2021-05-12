@@ -53,7 +53,7 @@ namespace detail
     // For quick sort
 
     template <typename T>
-    int partition(T a[], const size_t& l, const size_t& r) {
+    size_t partition(T a[], const size_t& l, const size_t& r) {
         T v = a[(l + r) / 2];
         size_t i = l;
         size_t j = r;
