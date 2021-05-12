@@ -69,22 +69,24 @@ namespace detail
         return j;
     }
 
-    template <typename T>
-    size_t median(const T a[], const size_t& l, const size_t& r) {
-        size_t tmp[3] = { l, (r + l) / 2, r };
-        while (!(a[tmp[1]] >= a[tmp[0]] && a[tmp[1]] <= a[tmp[2]])) {
-            if (a[tmp[1]] > a[tmp[0]]) {
-                swap<size_t>(tmp[0], tmp[1]);
-            }
-            else if (a[tmp[1]] < a[tmp[2]]) {
-                swap<size_t>(tmp[1], tmp[2]);
-            }
-            else if (a[tmp[0]] > a[tmp[2]]) {
-                swap<size_t>(tmp[0], tmp[2]);
-            }
-        }
-        return tmp[1];
-    }
+    // template <typename T>
+    // size_t median(const T a[], const size_t& l, const size_t& r) {
+    //     size_t tmp[3] = { l, (r + l) / 2, r };
+    //     while (!(a[tmp[1]] >= a[tmp[0]] && a[tmp[1]] <= a[tmp[2]])) {
+    //         if (a[tmp[1]] > a[tmp[0]]) {
+    //             swap<size_t>(tmp[0], tmp[1]);
+    //         }
+    //         else if (a[tmp[1]] < a[tmp[2]]) {
+    //             swap<size_t>(tmp[1], tmp[2]);
+    //         }
+    //         else if (a[tmp[0]] > a[tmp[2]]) {
+    //             swap<size_t>(tmp[0], tmp[2]);
+    //         }
+    //     }
+    //     return tmp[1];
+    // }
+
+
 
 
 
