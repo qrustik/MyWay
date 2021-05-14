@@ -8,7 +8,7 @@ int main(int argc, char const* argv[])
 {
     auto v = std::vector<int>{};
     auto v1 = std::vector<int>{};
-    auto a = std::array<int, 200>{};
+    auto a = std::array<int, 1000>{};
     size_t n = 1000;
     v.resize(n);
     v1.resize(n);
@@ -19,7 +19,7 @@ int main(int argc, char const* argv[])
 
     for (int i = 0; i < v.size(); ++i) {
         v[i] = dis(gen);
-        v1[i] = v[i];
+        a[i] = v[i];
     }
 
     for (auto&& i : v)
@@ -40,11 +40,11 @@ int main(int argc, char const* argv[])
     // for (int i = 0; i < n; ++i)
     //      std::cout << a[i] << " ";
 
-    myalgo::insertionSort<int>(v1.data(), v1.size());
+    myalgo::cntsort(a.data(), 1001, a.size());
 
-    std::cout << "\nInsert sort:\n";
+    std::cout << "\ncnt sort:\n";
 
-    for (auto&& i : v1) {
+    for (auto&& i : a) {
         std::cout << i << " ";
     }
 
